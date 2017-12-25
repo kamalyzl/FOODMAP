@@ -4,7 +4,7 @@
 * **Descripcion General:** _Web-app con diseño libre, utilizamos JQUERY Y BOOTSTRAP_
 * **Reto** 
 * **Contenido** 
-* **Visualiza el restultado final** : 
+* **Visualiza el restultado final** : https://kamalyzl.github.io/FOODMAP/
 ***
 
 
