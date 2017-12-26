@@ -1,19 +1,44 @@
 
 
-.preload {
+#loadPage {
     height: 100vh;
     width: 100%;
-    background: #333;      
-    z-index: 1;
+    background: #333;
+    z-index: 1000;
+    color: #a62;
     position: fixed;
 }
+#loadPage h1 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
 
-.logo {
-    color: #a62;
-    font-size: 3em;
-    text-align: center;
-    text-shadow: 5px 2px 2px #000;
-    margin: 250px auto 50px auto;
-    /* font-family:  */
+.pre-load {
+    border: 6px solid #ccc;
+    border-top-color: #a62;
+    border-top-style: groove;
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    position: absolute;
+    left: 46%;
+    top: 60%;
+    /* transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%); */
 
+    -webkit-animation: girar 1.5s linear infinite;
+    -o-animation:  girar 1.5s linear infinite;
+    animation:  girar 1.5s linear infinite;
+}
+
+@keyframes girar {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+ 
+#map {  
+    height: 25vh;   
 }
