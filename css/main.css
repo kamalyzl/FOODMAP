@@ -1,5 +1,11 @@
 
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
+/* EFECTO DE ESPERA AL INICIAR LA PAGINA____________ */
 #loadPage {
     height: 100vh;
     width: 100%;
@@ -8,6 +14,7 @@
     color: #a62;
     position: fixed;
 }
+/* CENTRADO DE TEXTO EN EFECTO */
 #loadPage h1 {
     position: absolute;
     left: 50%;
@@ -16,6 +23,7 @@
     -webkit-transform: translate(-50%, -50%);
 }
 
+/* EFECTO CIRCULAR QUE SIMULA LA ESPERA _____________ */
 .pre-load {
     border: 6px solid #ccc;
     border-top-color: #a62;
@@ -26,8 +34,6 @@
     position: absolute;
     left: 46%;
     top: 60%;
-    /* transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%); */
 
     -webkit-animation: girar 1.5s linear infinite;
     -o-animation:  girar 1.5s linear infinite;
@@ -38,7 +44,35 @@
     from {transform: rotate(0deg);}
     to {transform: rotate(360deg);}
 }
- 
+
+/* ESTILO DEL MAPA_____ */
 #map {  
-    height: 25vh;   
+    height: 25vh;
+    position: absolute;
+    top: 39%;
+    width: 90%;
+    margin-left: 5%;
+
+}
+
+
+.section-style {
+    background: #333;
+    color: #a62;
+    height: 100vh;
+
+}
+
+.style-text { 
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.styleTag {
+    width: 81%;
+    height: 33px;
+    border-radius: 3px;
+    position: absolute;
+    top: 67%;
+    left: 5%;
 }

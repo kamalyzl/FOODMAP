@@ -2,18 +2,18 @@
 
 
 $(window).ready(function () {
-
-    $('#loadPage').delay(2000).fadeOut("slow");
+    $('#loadPage').delay(1000).fadeOut("slow");
 })
-
 
 $(document).ready(begin);
 
 function begin() {
     maps();
+    // modal();
     $("#tags").autocomplete({
         source: availableTags
     });
+
 
 }
 
@@ -45,25 +45,51 @@ function maps() {
 var availableTags = [
     "Rokys",
     "Norkys",
-    "Asp",
-    "BASIC",
-    "C",
-    "C++",
-    "Clojure",
-    "COBOL",
-    "ColdFusion",
-    "Erlang",
-    "Fortran",
-    "Groovy",
-    "Haskell",
-    "Java",
-    "JavaScript",
-    "Lisp",
-    "Perl",
-    "PHP",
-    "Python",
-    "Ruby",
-    "Scala",
-    "Scheme"
+    "La nonita Empanadería",
+    "Previos online",
+    "Pet Lover",
+    "Berries del Perú",
+    "Villa chicken",
+    "La pastana",
+    "Chifa Express",
+    "Las canastas",
+    "Mr lee",
+    "Tip top",
+    "Don tito",
+    "La salchipaperia",
+    "Nocturnos.pe",
+    "Wong delivery",
+    "sushi Ki Delivery",
+    "Sabushi",
+    "Chifa Deliery",
+    "El punto express",
+    "Chuperman Delivery",
+    "Sr Saltado",
+    "Mashawi",
+    "Pizza Piazzana",
+    "Telepizza",
+    "Delicass",
+    "Don bajadon",
+    "La comelona",
+    "Sofá café",
+    "Don belisario",
+    "Popeyes",
+    "Papa johns",
+    "Patrio sangucheria",
+    "Restaurante caldero",
+    "Kriollisimo",
+    "Don Italo",
+    "FKC",
+    "EL enano",
+    "Burge King",
+    "Bembos",
+    "La Luchga"
 ];
 
+
+
+// MODAL____
+
+// function modal() {
+//     $("#slider").slider();
+// } 
