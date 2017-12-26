@@ -1,11 +1,11 @@
-body {
-    background: #333;
 
-}
+ 
 
-div iframe{
-    width: 90%;
-    margin-left: 5%;
-   
+#map {
+ 
+    outline: 1px solid red;
+    height: 25vh;
+    background: none;
+    
 
 }
