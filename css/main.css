@@ -1,4 +1,3 @@
-
 *{
     box-sizing: border-box;
     margin: 0;
@@ -7,12 +6,13 @@
 
 /* EFECTO DE ESPERA AL INICIAR LA PAGINA____________ */
 #loadPage {
-    height: 100vh;
-    width: 100%;
+    height: 100vh;    
     background: #333;
     z-index: 1000;
     color: #a62;
     position: fixed;
+    outline: 1px solid red;
+    width: 100%;
 }
 /* CENTRADO DE TEXTO EN EFECTO */
 #loadPage h1 {
@@ -32,8 +32,8 @@
     width: 60px;
     border-radius: 100%;
     position: absolute;
-    left: 46%;
-    top: 60%;
+    left: 45%;
+    top: 60%;   
 
     -webkit-animation: girar 1.5s linear infinite;
     -o-animation:  girar 1.5s linear infinite;
@@ -46,33 +46,49 @@
 }
 
 /* ESTILO DEL MAPA_____ */
-#map {  
-    height: 25vh;
-    position: absolute;
-    top: 39%;
-    width: 90%;
+.map {  
+    height: 25vh;    
+    top: 0;
+    width: 80%;
     margin-left: 5%;
+}
 
+/* ESTILO DE SLIDER ___ */
+#slider {
+    margin: 20px auto;
 }
 
 
-.section-style {
+/* EMPEZANDO A DISEÑAR LA SECCION___ */
+
+.primary {
     background: #333;
-    color: #a62;
     height: 100vh;
-
+    color: #a62;
+    padding: 15px 10px;
 }
 
-.style-text { 
+.primary p { 
+    font-size: 2em;
     text-align: center;
-    font-size: 2.5em;
+    margin: 20px auto;
 }
 
-.styleTag {
-    width: 81%;
-    height: 33px;
-    border-radius: 3px;
+/* FILTRADO_____ */
+
+
+.custom-combobox {
+    position: relative;
+    display: inline-block;
+  }
+  .custom-combobox-toggle {
     position: absolute;
-    top: 67%;
-    left: 5%;
-}
+    top: 0;
+    bottom: 0;
+    margin-left: -1px;
+    padding: 0;
+  }
+  .custom-combobox-input {
+    margin: 0;
+    padding: 5px 10px;
+  }
