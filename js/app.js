@@ -5,32 +5,27 @@ var restaurants = [
     name: 'Rokys',
     tipo: 'Polleria',
     distrito: 'Lima',
-    banner: 'http://lorempixel.com/200/200'
+    banner: 'assets/images/rokys.jpg'
   }, {
     name: 'La nonita Empanadería',
     tipo: 'Panaderia',
     distrito: 'San juan de miraflores',
-    banner: 'http://lorempixel.com/200/200',
-  }, {
-    name: 'Pet Lover',
-    tipo: 'Panaderia',
-    distrito: 'Miraflores',
-    banner: 'http://lorempixel.com/200/200',
+    banner: 'assets/images/LanonitaEmpanaderia.jpg',
   }, {
     name: 'Berries del Perú',
     tipo: 'Licoreria',
     distrito: 'Chorrillos',
-    banner: 'http://lorempixel.com/200/200',
+    banner: 'assets/images/berries.jpg',
   }, {
     name: 'Villa chicken',
     tipo: 'Polleria',
     distrito: 'Surco',
-    banner: 'http://lorempixel.com/200/200',
+    banner: 'assets/images/villaChicken.jpg',
   }, {
     name: 'La pastana',
     tipo: 'Pastas',
     distrito: 'Surquillo',
-    banner: 'http://lorempixel.com/200/200',
+    banner: 'assets/images/laPastana.jpg',
   }, {
     name: 'Chifa Express',
     tipo: 'China',
@@ -93,12 +88,7 @@ var restaurants = [
     banner: 'http://lorempixel.com/200/200',
   }, {
     name: 'Chuperman Delivery',
-    tipo: 'Sangucheria',
-    distrito: 'Surco',
-    banner: 'http://lorempixel.com/200/200',
-  }, {
-    name: 'Sr Saltado',
-    tipo: 'Criollo',
+    tipo: 'Licoreria',
     distrito: 'Surco',
     banner: 'http://lorempixel.com/200/200',
   }, {
@@ -246,7 +236,6 @@ function sliderVertical() {
 }
 
 // REALIZAMOS LA SELECCION DE LO QUE QUEREMOS FILTRA Y LO UTILIZAMOS EN UNA FUNCION TAG
-
 var realArray = $.makeArray(restaurants); // convertirmos en array los objetos dentro del restaurante para luego manipularlo con map() 
 var nameRestaurant = $.map(realArray, function (val, i) {  // Array con los nombres de los restauranets 
   return val.name;
@@ -263,33 +252,45 @@ var listRestaurantsFinal = $.merge(listRestaurants, distritoRestaurant);
 function tagfiltr() {
   $("#tags").autocomplete({
     source: listRestaurantsFinal
-  });
+  })
 }
+
 function begin() {
+
+  // arrays de los tipos de restaurante
+  var polleria = restaurants.filter(restaurants => restaurants.banner == "Polleria");
+  var panaderia = restaurants.filter(restaurants => restaurants.tipo == "Panaderia");
+  var licoreria = restaurants.filter(restaurants => restaurants.tipo == "Licoreria");
+  var pastas = restaurants.filter(restaurants => restaurants.tipo == "Pastas");
+  var chifa = restaurants.filter(restaurants => restaurants.tipo == "Chifa");
+  var sangucheria = restaurants.filter(restaurants => restaurants.tipo == "Sangucheria");
+  var criollo = restaurants.filter(restaurants => restaurants.tipo == "Criollo");
+  var fastFood = restaurants.filter(restaurants => restaurants.tipo == "FastFood");
+  var cafe = restaurants.filter(restaurants => restaurants.tipo == "Cafe");
+
+
+  // console.log(nameRestaurant);
   maps();
   sliderVertical();
   tagfiltr();
+
+
+  $("#tags").on('keyup', function (e) {
+    var value = $(this).val();
+    for (i = 0; i < nameRestaurant.length; i++) {
+      if (value == nameRestaurant[i]) {
+        for (j = 0; j < restaurants.length; j++) {
+          if (value == restaurants[j].name) {
+            $('.img').append("<img src = " + restaurants[j].banner + "></img>");
+          } else {
+            $('#img').html("");
+          }
+        }
+      } else {
+        $('#img').html("");
+      }
+    }
+  });
+
+
 }
-
-function filtroRestaurante() {
-
-
-}
-
-// console.log(distritoRestaurant.unique());
-
-// arrays de los tipos de restaurante
-var polleria = restaurants.filter(restaurants => restaurants.tipo == "Polleria");
-var panaderia = restaurants.filter(restaurants => restaurants.tipo == "Panaderia");
-var licoreria = restaurants.filter(restaurants => restaurants.tipo == "Licoreria");
-var pastas = restaurants.filter(restaurants => restaurants.tipo == "Pastas");
-var chifa = restaurants.filter(restaurants => restaurants.tipo == "Chifa");
-var sangucheria = restaurants.filter(restaurants => restaurants.tipo == "Sangucheria");
-var criollo = restaurants.filter(restaurants => restaurants.tipo == "Criollo");
-var fastFood = restaurants.filter(restaurants => restaurants.tipo == "FastFood");
-var cafe = restaurants.filter(restaurants => restaurants.tipo == "Cafe");
-
-// console.log( nameRestaurant);
-// console.log(polleria);
-// console.log( tipoRestaurant);
-// console.log(listRestaurants);
