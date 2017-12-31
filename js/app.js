@@ -30,167 +30,162 @@ var restaurants = [
     name: 'Chifa Express',
     tipo: 'China',
     distrito: 'Miraflores',
-    banner: 'http://lorempixel.com/200/200',
+    banner: 'assets/images/chifaExpress.jpg',
   }, {
     name: 'Las canastas',
     tipo: 'Polleria',
     distrito: 'Surquillo',
-    banner: 'http://lorempixel.com/200/200',
+    banner: 'assets/images/lasCanastas.jpg',
   }, {
     name: 'Mr lee',
     tipo: 'China',
     distrito: 'Miraflores',
-    banner: 'http://lorempixel.com/200/200',
+    banner: 'assets/images/mrLee.jpg',
   }, {
     name: 'Tip top',
     tipo: 'Sangucheria',
     distrito: 'Lima',
-    banner: 'http://lorempixel.com/200/200',
+    banner: 'assets/images/tiptop.jpg',
   }, {
     name: 'Don tito',
     tipo: 'Sangucheria',
     distrito: 'Pueblo libre',
-    banner: 'http://lorempixel.com/200/200',
+    banner: 'assets/images/donTito.jpg',
   }, {
     name: 'La salchipaperia',
     tipo: 'Sangucheria',
     distrito: 'San juan de lurigancho',
-    banner: 'http://lorempixel.com/200/200',
+    banner: 'assets/images/laSalchipaperia.jpg',
   }, {
     name: 'Nocturnos.pe',
     tipo: 'Sangucheria',
     distrito: 'Barranco',
-    banner: 'http://lorempixel.com/200/200',
+    banner: 'assets/images/nocturnosPe.jpg',
   }, {
     name: 'Wong delivery',
     tipo: 'Polleria',
     distrito: 'Barranco',
-    banner: 'http://lorempixel.com/200/200',
+    banner: 'assets/images/wongDelivery.jpg',
   }, {
     name: 'sushi Ki Delivery',
     tipo: 'China',
     distrito: 'Barranco',
-    banner: 'http://lorempixel.com/200/200',
+    banner: 'assets/images/sushiKiDelivery.jpg',
   }, {
     name: 'Sabushi',
     tipo: 'China',
     distrito: 'Miraflores',
-    banner: 'http://lorempixel.com/200/200',
+    banner: 'assets/images/sabushi.jpg',
   }, {
     name: 'Chifa Deliery',
     tipo: 'China',
     distrito: 'Lima',
-    banner: 'http://lorempixel.com/200/200',
+    banner: 'assets/images/ChifaDelivery.jpg',
   }, {
     name: 'El punto express',
     tipo: 'China',
     distrito: 'Surco',
-    banner: 'http://lorempixel.com/200/200',
+    banner: 'assets/images/elPuntoExpress.jpg',
   }, {
     name: 'Chuperman Delivery',
     tipo: 'Licoreria',
     distrito: 'Surco',
-    banner: 'http://lorempixel.com/200/200',
+    banner: 'assets/images/chuperman.jpg',
   }, {
     name: 'Mashawi',
     tipo: 'China',
     distrito: 'Barranco',
-    banner: 'http://lorempixel.com/200/200',
+    banner: 'assets/images/mashawi.jpg',
   }, {
     name: 'Pizza Piazzana',
     tipo: 'Pastas',
     distrito: 'Barranco',
-    banner: 'http://lorempixel.com/200/200',
+    banner: 'assets/images/piazzana.jpg',
   }, {
     name: 'Telepizza',
     tipo: 'FastFood',
     distrito: 'Lima',
-    banner: 'http://lorempixel.com/200/200',
+    banner: 'assets/images/telepizza.jpg',
   }, {
     name: 'Delicass',
     tipo: 'Criollo',
     distrito: 'Barranco',
-    banner: 'http://lorempixel.com/200/200',
+    banner: 'assets/images/delicass.jpg',
   }, {
     name: 'Don bajadon',
     tipo: 'Sangucheria',
     distrito: 'Lima',
-    banner: 'http://lorempixel.com/200/200',
-  }, {
-    name: 'La comelona',
-    tipo: 'Sangucheria',
-    distrito: 'Lima',
-    banner: 'http://lorempixel.com/200/200',
+    banner: 'assets/images/donBajadon.jpg',
   }, {
     name: 'Sofá café',
     tipo: 'Cafe',
     distrito: 'Surco',
-    banner: 'http://lorempixel.com/200/200',
+    banner: 'assets/images/sofaCafe.jpg',
   }, {
     name: 'Don belisario',
     tipo: 'Polleria',
     distrito: 'Surquillo',
-    banner: 'http://lorempixel.com/200/200',
+    banner: 'assets/images/donBelisario.jpg',
   }, {
     name: 'Popeyes',
     tipo: 'FastFood',
     distrito: 'Lima',
-    banner: 'http://lorempixel.com/200/200',
+    banner: 'assets/images/popeyes.jpg',
   }, {
     name: 'Papa johns',
     tipo: 'FastFood',
     distrito: 'Callo',
-    banner: 'http://lorempixel.com/200/200',
+    banner: 'assets/images/papaJohns.jpg',
   }, {
     name: 'Patrio sangucheria',
     tipo: 'Sangucheria',
     distrito: 'Lima',
-    banner: 'http://lorempixel.com/200/200',
+    banner: 'assets/images/patrioSangucheria.jpg',
   }, {
     name: 'Restaurante caldero',
     tipo: 'Criollo',
     distrito: 'Lima',
-    banner: 'http://lorempixel.com/200/200',
+    banner: 'assets/images/elCaldero.jpg',
   }, {
     name: 'Kriollisimo',
     tipo: 'Criollo',
     distrito: 'Lima',
-    banner: 'http://lorempixel.com/200/200',
+    banner: 'assets/images/kriollisimo.jpg',
   }, {
     name: 'Don Italo',
     tipo: 'Criollo',
     distrito: 'Lima',
-    banner: 'http://lorempixel.com/200/200',
+    banner: 'assets/images/donItalo.jpg',
   }, {
     name: 'EL enano',
     tipo: 'Sangucheria',
     distrito: 'Miraflores',
-    banner: 'http://lorempixel.com/200/200',
+    banner: 'assets/images/elEnano.jpg',
   }, {
     name: 'Burge King',
     tipo: 'FastFood',
     distrito: 'Miraflores',
-    banner: 'http://lorempixel.com/200/200',
+    banner: 'assets/images/burgerKing.jpg',
   }, {
     name: 'Bembos',
     tipo: 'FastFood',
     distrito: 'Callao',
-    banner: 'http://lorempixel.com/200/200',
+    banner: 'assets/images/bembos.jpg',
   }, {
     name: 'KFC',
     tipo: 'FastFood',
     distrito: 'Surquillo',
-    banner: 'http://lorempixel.com/200/200',
+    banner: 'assets/images/kfc.jpg',
   }, {
     name: 'La lucha',
     tipo: 'Sangucheria',
     distrito: 'Surquillo',
-    banner: 'http://lorempixel.com/200/200',
+    banner: 'assets/images/laLucha.jpg',
   }, {
     name: 'Norkys',
     tipo: 'Polleria',
     distrito: 'Surquillo',
-    banner: 'http://lorempixel.com/200/200',
+    banner: 'assets/images/norkys.jpg',
   }
 ]
 
@@ -273,21 +268,20 @@ function begin() {
   maps();
   sliderVertical();
   tagfiltr();
-
-
+  
   $("#tags").on('keyup', function (e) {
-    var value = $(this).val();
+    var value =  $(this).val();
     for (i = 0; i < nameRestaurant.length; i++) {
       if (value == nameRestaurant[i]) {
         for (j = 0; j < restaurants.length; j++) {
-          if (value == restaurants[j].name) {
-            $('.img').append("<img src = " + restaurants[j].banner + "></img>");
+          if (value == restaurants[j].tipo ||value == restaurants[j].name || value == restaurants[j].distrito  ) {
+            $('.img').append("<img class='imageRestaurant' src = " + restaurants[j].banner + "></img>");
           } else {
-            $('#img').html("");
+          //  console.log('estas en el primer else');
           }
         }
       } else {
-        $('#img').html("");
+        // console.log('estas en el segundo else');
       }
     }
   });

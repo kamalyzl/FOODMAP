@@ -66,8 +66,9 @@
 /* EMPEZANDO A DISEÑAR LA SECCION___ */
 
 .primary {
-    background: #333;
+    background: #333;    
     height: 100vh;
+    height: auto;
     color: #a62;
     padding: 15px 25px;
 }
@@ -101,4 +102,12 @@
 #tags {
   width: 100%;
   height: 30px;
+}
+
+/*Estilo de las imagenes*/
+.imageRestaurant {
+    width: 30%;
+    height: auto;
+    margin-top: 10px;
+    margin-right: 10px;
 }
