@@ -251,20 +251,6 @@ function tagfiltr() {
 }
 
 function begin() {
-
-  // arrays de los tipos de restaurante
-  var polleria = restaurants.filter(restaurants => restaurants.banner == "Polleria");
-  var panaderia = restaurants.filter(restaurants => restaurants.tipo == "Panaderia");
-  var licoreria = restaurants.filter(restaurants => restaurants.tipo == "Licoreria");
-  var pastas = restaurants.filter(restaurants => restaurants.tipo == "Pastas");
-  var chifa = restaurants.filter(restaurants => restaurants.tipo == "Chifa");
-  var sangucheria = restaurants.filter(restaurants => restaurants.tipo == "Sangucheria");
-  var criollo = restaurants.filter(restaurants => restaurants.tipo == "Criollo");
-  var fastFood = restaurants.filter(restaurants => restaurants.tipo == "FastFood");
-  var cafe = restaurants.filter(restaurants => restaurants.tipo == "Cafe");
-
-
-  // console.log(nameRestaurant);
   maps();
   sliderVertical();
   tagfiltr();
@@ -273,18 +259,22 @@ function begin() {
     var value =  $(this).val();
     for (i = 0; i < nameRestaurant.length; i++) {
       if (value == nameRestaurant[i]) {
+        $( "h2" ).remove();
+        $('.mask').append("<h2>"+nameRestaurant[i]+ "</h2>");
         for (j = 0; j < restaurants.length; j++) {
           if (value == restaurants[j].tipo ||value == restaurants[j].name || value == restaurants[j].distrito  ) {
+            $( ".delete" ).remove();
+            $('.mask').append("<p class='delete'> Tipo: "+restaurants[j].tipo+ "</p>");
+            $( ".imageRestaurant" ).remove();
             $('.img').append("<img class='imageRestaurant' src = " + restaurants[j].banner + "></img>");
           } else {
-          //  console.log('estas en el primer else');
+          //  ...
           }
         }
       } else {
-        // console.log('estas en el segundo else');
+        // ...
       }
     }
   });
-
 
 }

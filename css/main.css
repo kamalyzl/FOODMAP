@@ -64,10 +64,8 @@
 }
 
 /* EMPEZANDO A DISEÑAR LA SECCION___ */
-
 .primary {
     background: #333;    
-    height: 100vh;
     height: auto;
     color: #a62;
     padding: 15px 25px;
@@ -80,8 +78,6 @@
 }
 
 /* FILTRADO_____ */
-
-
 .custom-combobox {
     position: relative;
     display: inline-block;
@@ -106,8 +102,12 @@
 
 /*Estilo de las imagenes*/
 .imageRestaurant {
-    width: 30%;
-    height: auto;
-    margin-top: 10px;
-    margin-right: 10px;
+    width: 300px; 
+    height: 250px; 
+    border-radius: 20px;
+}
+
+.boxImgP {
+    padding-left: 20px;
+    height: 255px;
 }
