@@ -190,38 +190,46 @@ var restaurants = [
 ]
 
 //metodo creado para eliminar arrays repetidos
-Array.prototype.unique = function (a) {
-  return function () { return this.filter(a) }
-}(function (a, b, c) {
+Array.prototype.unique = function(a) {
+  return function() {
+      return this.filter(a)
+  }
+}(function(a, b, c) {
   return c.indexOf(a, b + 1) < 0
 });
 
 
-$(window).ready(function () {
+$(window).ready(function() {
   $('#loadPage').delay(1000).fadeOut("slow");
 })
 $(document).ready(begin);
 // Insertando mapa
 var map;
+
 function initMap() {
   var mapCenter = new google.maps.LatLng(47.6145, -122.3418); //Google map Coordinates
   map = new google.maps.Map($("#map")[0], {
-    center: mapCenter,
-    zoom: 10
+      center: mapCenter,
+      zoom: 10
   });
 }
 
 function maps() {
   if ("geolocation" in navigator) {
-    navigator.geolocation.getCurrentPosition(function (position) {
-      infoWindow = new google.maps.InfoWindow({ map: map });
-      var pos = { lat: position.coords.latitude, lng: position.coords.longitude };
-      infoWindow.setPosition(pos);
-      infoWindow.setContent("Found your location <br />Lat : " + position.coords.latitude + " </br>Lang :" + position.coords.longitude);
-      map.panTo(pos);
-    });
+      navigator.geolocation.getCurrentPosition(function(position) {
+          infoWindow = new google.maps.InfoWindow({
+              map: map
+          });
+          var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+          };
+          infoWindow.setPosition(pos);
+          infoWindow.setContent("Found your location <br />Lat : " + position.coords.latitude + " </br>Lang :" + position.coords.longitude);
+          map.panTo(pos);
+      });
   } else {
-    console.log("Browser doesn't support geolocation!");
+      console.log("Browser doesn't support geolocation!");
   }
 }
 
@@ -232,13 +240,13 @@ function sliderVertical() {
 
 // REALIZAMOS LA SELECCION DE LO QUE QUEREMOS FILTRA Y LO UTILIZAMOS EN UNA FUNCION TAG
 var realArray = $.makeArray(restaurants); // convertirmos en array los objetos dentro del restaurante para luego manipularlo con map() 
-var nameRestaurant = $.map(realArray, function (val, i) {  // Array con los nombres de los restauranets 
+var nameRestaurant = $.map(realArray, function(val, i) { // Array con los nombres de los restauranets 
   return val.name;
 }).unique();
-var tipoRestaurant = $.map(realArray, function (val, i) {// Array con los tipos de restauranets 
+var tipoRestaurant = $.map(realArray, function(val, i) { // Array con los tipos de restauranets 
   return val.tipo;
 }).unique();
-var distritoRestaurant = $.map(realArray, function (val, i) {// Array con los distrito  de los restauranets 
+var distritoRestaurant = $.map(realArray, function(val, i) { // Array con los distrito  de los restauranets 
   return val.distrito;
 }).unique();
 var listRestaurants = $.merge(nameRestaurant, tipoRestaurant, distritoRestaurant);
@@ -246,7 +254,7 @@ var listRestaurantsFinal = $.merge(listRestaurants, distritoRestaurant);
 
 function tagfiltr() {
   $("#tags").autocomplete({
-    source: listRestaurantsFinal
+      source: listRestaurantsFinal
   })
 }
 
@@ -254,27 +262,27 @@ function begin() {
   maps();
   sliderVertical();
   tagfiltr();
-  
-  $("#tags").on('keyup', function (e) {
-    var value =  $(this).val();
-    for (i = 0; i < nameRestaurant.length; i++) {
-      if (value == nameRestaurant[i]) {
-        $( "h2" ).remove();
-        $('.mask').append("<h2>"+nameRestaurant[i]+ "</h2>");
-        for (j = 0; j < restaurants.length; j++) {
-          if (value == restaurants[j].tipo ||value == restaurants[j].name || value == restaurants[j].distrito  ) {
-            $( ".delete" ).remove();
-            $('.mask').append("<p class='delete'> Tipo: "+restaurants[j].tipo+ "</p>");
-            $( ".imageRestaurant" ).remove();
-            $('.img').append("<img class='imageRestaurant' src = " + restaurants[j].banner + "></img>");
+
+  $("#tags").on('keyup', function(e) {
+      var value = $(this).val();
+      for (i = 0; i < nameRestaurant.length; i++) {
+          if (value == nameRestaurant[i]) {
+              $("h2").remove();
+              $('.mask').append("<h2>" + nameRestaurant[i] + "</h2>");
+              for (j = 0; j < restaurants.length; j++) {
+                  if (value == restaurants[j].tipo || value == restaurants[j].name || value == restaurants[j].distrito) {
+                      $(".delete").remove();
+                      $('.mask').append("<p class='delete'> Tipo: " + restaurants[j].tipo + "</p>");
+                      $(".imageRestaurant").remove();
+                      $('.img').append("<img class='imageRestaurant' src = " + restaurants[j].banner + "></img>");
+                  } else {
+                      //  ...
+                  }
+              }
           } else {
-          //  ...
+              // ...
           }
-        }
-      } else {
-        // ...
       }
-    }
   });
 
 }

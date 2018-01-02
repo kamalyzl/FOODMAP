@@ -1,113 +1,116 @@
 /* RESET */
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Muli', sans-serif;
-}
-
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Muli', sans-serif;
+ }
+ 
 /* EFECTO DE ESPERA AL INICIAR LA PAGINA____________ */
 #loadPage {
-    height: 100vh;    
-    background: #333;
-    z-index: 1000;
-    color: #a62;
-    position: fixed;
-    outline: 1px solid red;
-    width: 100%;
-}
-/* CENTRADO DE TEXTO EN EFECTO_________ */
+	height: 100vh;
+	background: #333;
+	z-index: 1000;
+	color: #a62;
+	position: fixed;
+	outline: 1px solid red;
+	width: 100%;
+ }
+ 
+	/* CENTRADO DE TEXTO EN EFECTO_________ */
 #loadPage h1 {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-}
-
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		-webkit-transform: translate(-50%, -50%);
+	 }
+ 
 /* EFECTO CIRCULAR QUE SIMULA LA ESPERA _____________ */
 .pre-load {
-    border: 6px solid #ccc;
-    border-top-color: #a62;
-    border-top-style: groove;
-    height: 60px;
-    width: 60px;
-    border-radius: 100%;
-    position: absolute;
-    left: 45%;
-    top: 60%;   
-    -webkit-animation: girar 1.5s linear infinite;
-    -o-animation:  girar 1.5s linear infinite;
-    animation:  girar 1.5s linear infinite;
-}
-
-@keyframes girar {
-    from {transform: rotate(0deg);}
-    to {transform: rotate(360deg);}
-}
-
-/* ESTILO DEL MAPA_____ */
-.map {  
-    height: 25vh;    
-    top: 0;
-    width: 100%;
-}
-
+	border: 6px solid #ccc;
+	border-top-color: #a62;
+	border-top-style: groove;
+	height: 60px;
+	width: 60px;
+	border-radius: 100%;
+	position: absolute;
+	left: 45%;
+	top: 60%;
+	-webkit-animation: girar 1.5s linear infinite;
+	-o-animation: girar 1.5s linear infinite;
+	animation: girar 1.5s linear infinite;
+ }
+ 
+@keyframes girar {from}
+ 
+to {transform: rotate(360deg);}
+ 
+{}
+ 
+	/* ESTILO DEL MAPA_____ */
+.map {
+		height: 25vh;
+		top: 0;
+		width: 100%;
+	 }
+ 
 /* ESTILO DE SLIDER ___ */
 #slider {
-    margin: 20px auto;
-    height: 4px;
-}
-
-#slider span{    
-    top: -8px;
-}
-
+	margin: 20px auto;
+	height: 4px;
+ }
+ 
+	#slider span {top: -8px;}
+ 
 /* EMPEZANDO A DISEÑAR LA SECCION___ */
 .primary {
-    background: #333;    
-    height: auto;
-    color: #a62;
-    padding: 15px 25px;
-}
-
-.primary p { 
-    font-size: 2em;
-    text-align: center;
-    margin: 20px auto;
-}
-
+	background: #333;
+	height: auto;
+	color: #a62;
+	padding: 15px 25px;
+ }
+ 
+	.primary p {
+		font-size: 2em;
+		text-align: center;
+		margin: 20px auto;
+	 }
+ 
 /* FILTRADO_____ */
 .custom-combobox {
-    position: relative;
-    display: inline-block;
-  }
+	position: relative;
+	display: inline-block;
+ }
+ 
 .custom-combobox-toggle {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin-left: -1px;
-    padding: 0;
-  }
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin-left: -1px;
+	padding: 0;
+ }
+ 
 .custom-combobox-input {
-    margin: 0;
-    padding: 5px 10px;
-  }
-
-  /* ESTILO DEL INPUT */
+	margin: 0;
+	padding: 5px 10px;
+ }
+ 
+/* ESTILO DEL INPUT */
 #tags {
-  width: 100%;
-  height: 30px;
-}
-
+	width: 100%;
+	height: 30px;
+	text-transform: capitalize;
+ }
+ 
 /*Estilo de las imagenes*/
 .imageRestaurant {
-    width: 300px; 
-    height: 250px; 
-    border-radius: 20px;
-}
-
+	width: 300px;
+	height: 250px;
+	border-radius: 20px;
+ }
+ 
 .boxImgP {
-    padding-left: 20px;
-    height: 255px;
-}
+	padding-left: 20px;
+	height: 255px;
+ }
