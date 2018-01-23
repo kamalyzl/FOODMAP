@@ -1,5 +1,5 @@
 
-//Creamos un objeto dentro de un array, cada objeto es un restaurante
+// Creamos un objeto dentro de un array, cada objeto es un restaurante
 var restaurants = [
   {
     name: 'Rokys',
@@ -187,55 +187,55 @@ var restaurants = [
     distrito: 'Surquillo',
     banner: 'assets/images/norkys.jpg',
   }
-]
+];
 
-//metodo creado para eliminar arrays repetidos
+// metodo creado para eliminar arrays repetidos
 Array.prototype.unique = function(a) {
   return function() {
-      return this.filter(a)
-  }
+    return this.filter(a);
+  };
 }(function(a, b, c) {
-  return c.indexOf(a, b + 1) < 0
+  return c.indexOf(a, b + 1) < 0;
 });
 
 
 $(window).ready(function() {
-  $('#loadPage').delay(1000).fadeOut("slow");
-})
+  $('#loadPage').delay(1000).fadeOut('slow');
+});
 $(document).ready(begin);
 // Insertando mapa
 var map;
 
 function initMap() {
-  var mapCenter = new google.maps.LatLng(47.6145, -122.3418); //Google map Coordinates
-  map = new google.maps.Map($("#map")[0], {
-      center: mapCenter,
-      zoom: 10
+  var mapCenter = new google.maps.LatLng(47.6145, -122.3418); // Google map Coordinates
+  map = new google.maps.Map($('#map')[0], {
+    center: mapCenter,
+    zoom: 10
   });
 }
 
 function maps() {
-  if ("geolocation" in navigator) {
-      navigator.geolocation.getCurrentPosition(function(position) {
-          infoWindow = new google.maps.InfoWindow({
-              map: map
-          });
-          var pos = {
-              lat: position.coords.latitude,
-              lng: position.coords.longitude
-          };
-          infoWindow.setPosition(pos);
-          infoWindow.setContent("Found your location <br />Lat : " + position.coords.latitude + " </br>Lang :" + position.coords.longitude);
-          map.panTo(pos);
+  if ('geolocation' in navigator) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      infoWindow = new google.maps.InfoWindow({
+        map: map
       });
+      var pos = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude
+      };
+      infoWindow.setPosition(pos);
+      infoWindow.setContent('Found your location <br />Lat : ' + position.coords.latitude + ' </br>Lang :' + position.coords.longitude);
+      map.panTo(pos);
+    });
   } else {
-      console.log("Browser doesn't support geolocation!");
+    console.log('Browser doesn\'t support geolocation!');
   }
 }
 
-//SLIDER
+// SLIDER
 function sliderVertical() {
-  $("#slider").slider();
+  $('#slider').slider();
 }
 
 // REALIZAMOS LA SELECCION DE LO QUE QUEREMOS FILTRA Y LO UTILIZAMOS EN UNA FUNCION TAG
@@ -253,9 +253,9 @@ var listRestaurants = $.merge(nameRestaurant, tipoRestaurant, distritoRestaurant
 var listRestaurantsFinal = $.merge(listRestaurants, distritoRestaurant);
 
 function tagfiltr() {
-  $("#tags").autocomplete({
-      source: listRestaurantsFinal
-  })
+  $('#tags').autocomplete({
+    source: listRestaurantsFinal
+  });
 }
 
 function begin() {
@@ -263,26 +263,25 @@ function begin() {
   sliderVertical();
   tagfiltr();
 
-  $("#tags").on('keyup', function(e) {
-      var value = $(this).val();
-      for (i = 0; i < nameRestaurant.length; i++) {
-          if (value == nameRestaurant[i]) {
-              $("h2").remove();
-              $('.mask').append("<h2>" + nameRestaurant[i] + "</h2>");
-              for (j = 0; j < restaurants.length; j++) {
-                  if (value == restaurants[j].tipo || value == restaurants[j].name || value == restaurants[j].distrito) {
-                      $(".delete").remove();
-                      $('.mask').append("<p class='delete'> Tipo: " + restaurants[j].tipo + "</p>");
-                      $(".imageRestaurant").remove();
-                      $('.img').append("<img class='imageRestaurant' src = " + restaurants[j].banner + "></img>");
-                  } else {
-                      //  ...
-                  }
-              }
+  $('#tags').on('keyup', function(e) {
+    var value = $(this).val();
+    for (i = 0; i < nameRestaurant.length; i++) {
+      if (value == nameRestaurant[i]) {
+        $('h2').remove();
+        $('.mask').append('<h2>' + nameRestaurant[i] + '</h2>');
+        for (j = 0; j < restaurants.length; j++) {
+          if (value == restaurants[j].tipo || value == restaurants[j].name || value == restaurants[j].distrito) {
+            $('.delete').remove();
+            $('.mask').append('<p class=\'delete\'> Tipo: ' + restaurants[j].tipo + '</p>');
+            $('.imageRestaurant').remove();
+            $('.img').append('<img class=\'imageRestaurant\' src = ' + restaurants[j].banner + '></img>');
           } else {
-              // ...
+            //  ...
           }
+        }
+      } else {
+        // ...
       }
+    }
   });
-
 }
